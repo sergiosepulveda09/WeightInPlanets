@@ -8,6 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>Your weight in another planet</h1>
+    <p>Your weight is different depeneding on the planet you are in </p>
+
+    <script>
+        var userWeight = parseFloat(prompt("What is your weight?"));
+        var planet = prompt("Are you curious about your weight in other planets?" + 
+            " Choose one : \n 1.Mars \n 2.Jupiter");
+        var gravityEarth = 9.8;
+        var gravityPlanetChosen = 0;
+        var gravityMars = 3.7;
+        var gravityJupiter = 28.6; 
+        if(planet == "1") {
+            gravityPlanetChosen = gravityMars;
+        }
+        else {
+            gravityPlanetChosen = gravityJupiter;
+        }
+        var finalWeight = userWeight * gravityPlanetChosen / gravityEarth;
+        document.write("Your weight in mars is <strong>" + finalWeight.toFixed(2)
+             + " kilograms </strong>");
+    </script>
 </body>
 </html>
