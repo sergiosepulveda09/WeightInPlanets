@@ -17,16 +17,21 @@
             " Choose one : \n 1.Mars \n 2.Jupiter");
         var gravityEarth = 9.8;
         var gravityPlanetChosen = 0;
-        var gravityMars = 3.7;
         var gravityJupiter = 28.6; 
         if(planet == "1") {
-            gravityPlanetChosen = gravityMars;
+            gravityPlanetChosen = 3.7;
+            planet = "mars"
+
+        }
+        else if(planet == "2"){
+            gravityPlanetChosen = gravityJupiter;
+            planet = "jupiter"
         }
         else {
-            gravityPlanetChosen = gravityJupiter;
+            document.write("Error!")
         }
         var finalWeight = userWeight * gravityPlanetChosen / gravityEarth;
-        document.write("Your weight in mars is <strong>" + finalWeight.toFixed(2)
+        document.write("Your weight in " + planet + " is <strong>" + finalWeight.toFixed(2)
              + " kilograms </strong>");
     </script>
 </body>
